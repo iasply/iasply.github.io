@@ -49,7 +49,7 @@ p { margin: 0; }
 
 .sub { color: var(--muted); font-style: italic; }
 
-.bio { max-width: 27rem; margin: 1.4rem auto 0; }
+.areas { margin-top: 1.4rem; letter-spacing: .04em; }
 
 .links {
   margin-top: 1.6rem;
