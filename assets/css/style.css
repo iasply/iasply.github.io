@@ -35,7 +35,7 @@ body {
   place-items: center;
   background: var(--bg);
   color: var(--text);
-  font-family: "EB Garamond", Garamond, Georgia, serif;
+  font-family: "Brygada 1918", Georgia, serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   transition: background-color .25s, color .25s;
@@ -80,7 +80,7 @@ a:hover { text-decoration-color: var(--muted); }
   border: 0;
   background: none;
   color: var(--muted);
-  font: .8rem "EB Garamond", Georgia, serif;
+  font: .8rem "Brygada 1918", Georgia, serif;
   letter-spacing: .1em;
   cursor: pointer;
   transition: color .2s;
