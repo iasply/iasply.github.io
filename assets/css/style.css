@@ -1,0 +1,101 @@
+:root {
+  --bg: #f8f3e8;
+  --text: #3b342b;
+  --muted: #71675a;
+  --line: #e0d5c2;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1d1b18;
+    --text: #e4ddd0;
+    --muted: #9b9183;
+    --line: #3a352e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1d1b18;
+  --text: #e4ddd0;
+  --muted: #9b9183;
+  --line: #3a352e;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 19px; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .25s, color .25s;
+}
+
+main { padding: 2rem 16px; text-align: center; }
+
+h1 { font-size: 2.4rem; font-weight: 500; line-height: 1.2; margin: 0; }
+
+p { margin: 0; }
+
+.sub { color: var(--muted); font-style: italic; }
+
+.bio { max-width: 27rem; margin: 1.4rem auto 0; }
+
+.links {
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .4rem 1.4rem;
+}
+
+a { color: inherit; text-decoration-color: var(--line); text-underline-offset: .2em; }
+a:hover { text-decoration-color: var(--muted); }
+
+.prefs {
+  position: fixed;
+  top: 1rem;
+  right: 16px;
+  display: flex;
+  gap: .3rem;
+}
+.prefs button {
+  display: grid;
+  place-items: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 .4rem;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: .8rem "EB Garamond", Georgia, serif;
+  letter-spacing: .1em;
+  cursor: pointer;
+  transition: color .2s;
+}
+.prefs button:hover { color: var(--text); }
+.prefs svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+
+.icon-sun { display: none; }
+:root[data-theme="dark"] .icon-sun { display: block; }
+:root[data-theme="dark"] .icon-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .icon-moon { display: none; }
+}
+
+@media (max-width: 600px) {
+  html { font-size: 17px; }
+}
